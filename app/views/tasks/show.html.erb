@@ -10,11 +10,23 @@
   <% end %>
 </div>
 
-<%= link_to "Edit", edit_task_path %>
+<div class="buttons">
+  <div class="edit-delete-buttons">
+    <%= link_to edit_task_path, class: "btn btn-warning" do %>
+      <i class="far fa-edit"></i> Edit
+    <% end %>
 
-<%= link_to "Delete",
-            task_path(@task),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
+    <%= link_to task_path(@task),
+                method: :delete,
+                data: { confirm: "Are you sure?" },
+                class: "btn btn-danger" do %>
+      <i class="far fa-trash-alt"></i> Delete
+    <% end %>
+  </div>
+  
+  <hr width="98%">
 
-<%= link_to "Back to list", tasks_path %>
+  <%= link_to tasks_path, class: "btn btn-link" do %>
+    <i class="fas fa-history"></i> Back to list
+  <% end %>
+</div>

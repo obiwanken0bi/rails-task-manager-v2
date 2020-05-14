@@ -2,19 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-// All
-a {
-  text-decoration: none;
-  color: #377bb5;
-
-  &:hover {
-    text-decoration: underline;
-    color: #004c8f;
-  }
+h1 {
+  margin: 24px 0;
 }
 
-// Index
-.index-list {
+ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+.back-link {
+  margin-top: 18px;
 }

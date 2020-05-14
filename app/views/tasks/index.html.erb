@@ -1,6 +1,6 @@
 <h1>My tasks</h1>
 
-<div class="index-list">
+<ul>
   <% @tasks.each do |task| %>
     <% if task.completed %>
       <li><input type="checkbox" checked> <%= link_to task.title.capitalize, task_path(task) %></li>
@@ -8,6 +8,10 @@
       <li><input type="checkbox"> <%= link_to task.title.capitalize, task_path(task) %></li>
     <% end %>
   <% end %>
-</div>
+</ul>
 
-<%= link_to "+ Add a new task", new_task_path %>
+<hr width="98%">
+
+<%= link_to new_task_path, class: "btn btn-info" do %>
+  <i class="fas fa-plus"></i> Add a new task
+<% end %>
